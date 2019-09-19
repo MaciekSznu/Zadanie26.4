@@ -1,7 +1,7 @@
 const express = require('express');
 const http = require('http');
 const socketIo = require('socket.io');
-const UsersService = require('./UsersService');
+const UsersService = require('./UserService');
 
 const app = express();
 const server = http.createServer(app);
@@ -27,6 +27,9 @@ io.on('connection', (socket) => {
       users: usersService.getAllUsers()
     });
   });
+});
+
+io.on('connection', (socket) => {
   //obsługa rozłączenia użytkownika z serwerem
   socket.on('disconnect', () => {
     usersService.removeUser(socket.id);
@@ -34,6 +37,9 @@ io.on('connection', (socket) => {
       users: usersService.getAllUsers()
     });
   });
+});
+
+io.on('connection', (socket) => {
   //obsługa wysłania wiadomości
   socket.on('message', (message) => {
     const {name} = usersService.getUserById(socket.id);

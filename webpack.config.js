@@ -7,8 +7,8 @@ const plugins = [
         template: 'client/index.html',
         filename: 'index.html',
         inject: 'body'
-    }),
-]
+    })
+];
 
 //webpack.config.js
 module.exports = (env) => {
@@ -25,7 +25,7 @@ module.exports = (env) => {
     entry: './client/index.js',
     output: {
       path: path.resolve(__dirname, 'public'),
-      filename: 'app.bundle.js'
+      filename: 'app' + environment + '.bundle.js'
     },
     module: {
       rules: [
@@ -50,6 +50,10 @@ module.exports = (env) => {
         }
       ]
     },
+    optimization: {
+      minimize: false
+    },
+    plugins: plugins,
     devServer: {
       proxy: {
         '/socket.io': {

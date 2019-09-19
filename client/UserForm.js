@@ -3,6 +3,8 @@ import React, {Component} from 'react';
 
 import styles from './UserForm.css';
 
+// komponent-kontener
+
 // tworzymy komponent
 class UserForm extends Component {
   constructor(props) {

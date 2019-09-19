@@ -10,6 +10,8 @@ import UserForm from './UserForm';
 
 const socket = io('/');
 
+// komponent-kontener
+
 class App extends Component {
   constructor(props) {
     super(props);
