@@ -1,8 +1,11 @@
 .MessageList {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    width: 75vw;
-    padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 75vw;
+}
+
+.Message {
+  padding: 20px 20px 0 20px;
 }

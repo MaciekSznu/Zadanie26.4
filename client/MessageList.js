@@ -2,12 +2,10 @@ import React from 'react';
 
 import styles from './MessageList.css';
 
-// komponent prezentacyjny
-
 const Message = props => (
   <div className={styles.Message}>
-    <strong>{props.from} :</strong>
-    <span>{props.text}</span>
+    <strong>{props.from}:</strong>
+    <span> {props.text}</span>
   </div>
 );
 

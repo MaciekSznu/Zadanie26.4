@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import styles from './MessageForm.css';
 
-// komponent-kontener
 
 class MessageForm extends Component {
   constructor(props) {
@@ -31,7 +30,7 @@ class MessageForm extends Component {
           className={styles.MessageInput}
           onChange={e => this.changeHandler(e)}
           value={this.state.text}
-          placeholder='Message'
+          placeholder='Write Your Message Here'
         />
       </form>
     );
